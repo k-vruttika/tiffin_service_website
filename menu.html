@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Bangalore Tiffin Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for making menu items display in rows */
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            overflow-y: auto;
+            max-height: calc(100vh - 200px);
+        }
+
+        .menu-item {
+            width: calc(33.33% - 20px);
+            flex: 1 0 auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-item .price {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .menu-item .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #ff6200;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .menu-item .btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .menu-item {
+                width: 100%;
+            }
+        }
+
+        .go-to-cart {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .go-to-cart button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6200;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .go-to-cart button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://cdn-icons-png.freepik.com/128/2276/2276931.png" alt="Bangalore Tiffin Service">
+                <h4>Tiffin Service Website</h4>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="profile-logo">
+                    <a href="profile.html">
+                        <img src="https://www.shareicon.net/data/256x256/2017/05/30/886553_user_512x512.png" alt="Profile">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item" data-id="paneer-tikka-masala" data-name="Paneer Tikka Masala" data-price="120">
+                    <img src="https://admin.bagsy.in/storage/34981/paneer-tikka-masala.jpg" alt="Paneer Tikka Masala">
+                    <h3>Paneer Tikka Masala</h3>
+                    <p>Marinated paneer cubes cooked in a creamy tomato-based sauce, served with rice or naan.</p>
+                    <span class="price">₹120</span>
+                    <button class="btn add-to-cart" data-id="paneer-tikka-masala">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="dal-tadka" data-name="Dal Tadka" data-price="100">
+                    <img src="https://myfoodstory.com/wp-content/uploads/2016/09/Dhaba-Dal-Tadka-1-500x500.jpg" alt="Dal Tadka">
+                    <h3>Dal Tadka</h3>
+                    <p>Yellow lentils tempered with cumin, garlic, and onions, garnished with cilantro, served with steamed rice.</p>
+                    <span class="price">₹100</span>
+                    <button class="btn add-to-cart" data-id="dal-tadka">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="vegetable-biryani" data-name="Vegetable Biryani" data-price="150">
+                    <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2022/09/veg-biryani-1-500x500.jpeg" alt="Vegetable Biryani">
+                    <h3>Vegetable Biryani</h3>
+                    <p>Fragrant basmati rice cooked with mixed vegetables, saffron, and aromatic spices, served with raita.</p>
+                    <span class="price">₹150</span>
+                    <button class="btn add-to-cart" data-id="vegetable-biryani">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="chicken-curry" data-name="Chicken Curry" data-price="160">
+                    <img src="https://myfoodstory.com/wp-content/uploads/2020/04/restaurant-style-butter-chicken-masala-murgh-makhani-1-500x500.jpg" alt="Chicken Curry">
+                    <h3>Chicken Curry</h3>
+                    <p>Tender chicken pieces simmered in a rich, spiced gravy, served with your choice of rice or naan.</p>
+                    <span class="price">₹160</span>
+                    <button class="btn add-to-cart" data-id="chicken-curry">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="mutton-biryani" data-name="Mutton Biryani" data-price="200">
+                    <img src="https://bonmasala.com/wp-content/uploads/2022/10/mutton-biriyani-recipe-500x500.jpeg" alt="Mutton Biryani">
+                    <h3>Mutton Biryani</h3>
+                    <p>Tender mutton pieces marinated and cooked with basmati rice, saffron, and spices, served with cucumber raita.</p>
+                    <span class="price">₹200</span>
+                    <button class="btn add-to-cart" data-id="mutton-biryani">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="aloo-gobi" data-name="Aloo Gobi" data-price="110">
+                    <img src="https://rainbowplantlife.com/wp-content/uploads/2023/06/Aloo-Gobi-cover-photo-1-of-1-1-500x500.jpg" alt="Aloo Gobi">
+                    <h3>Aloo Gobi</h3>
+                    <p>Potatoes and cauliflower florets cooked with onions, tomatoes, and spices, served with chapati.</p>
+                    <span class="price">₹110</span>
+                    <button class="btn add-to-cart" data-id="aloo-gobi">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="palak-paneer" data-name="Palak Paneer" data-price="130">
+                    <img src="https://www.spiceupthecurry.com/wp-content/uploads/2022/01/palak-paneer-1-500x500.jpg" alt="Palak Paneer">
+                    <h3>Palak Paneer</h3>
+                    <p>Fresh spinach and cottage cheese cooked in a creamy spinach sauce, served with rice or naan.</p>
+                    <span class="price">₹130</span>
+                    <button class="btn add-to-cart" data-id="palak-paneer">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="veg-pulao" data-name="Veg Pulao" data-price="120">
+                    <img src="https://www.jcookingodyssey.com/wp-content/uploads/2023/09/vegetable-pulao-recipe-2-500x500.jpg" alt="Veg Pulao">
+                    <h3>Veg Pulao</h3>
+                    <p>Fragrant rice cooked with mixed vegetables, spices, and herbs, served with yogurt raita.</p>
+                    <span class="price">₹120</span>
+                    <button class="btn add-to-cart" data-id="veg-pulao">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="egg-curry" data-name="Egg Curry" data-price="170">
+                    <img src="https://5.imimg.com/data5/ANDROID/Default/2021/6/EX/II/KH/51274507/product-jpeg-500x500.jpg" alt="Egg Curry">
+                    <h3>Egg Curry</h3>
+                    <p>Hard-boiled eggs simmered in a spicy tomato-based gravy, served with steamed rice or roti.</p>
+                    <span class="price">₹170</span>
+                    <button class="btn add-to-cart" data-id="egg-curry">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="fish-fry" data-name="Fish Fry" data-price="200">
+                    <img src="https://5.imimg.com/data5/ANDROID/Default/2023/1/LL/IZ/CE/68982334/product-jpeg-500x500.jpg" alt="Fish Fry">
+                    <h3>Fish Fry</h3>
+                    <p>Crispy fried fish fillets marinated in spices, served with mint chutney and salad.</p>
+                    <span class="price">₹200</span>
+                    <button class="btn add-to-cart" data-id="fish-fry">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="butter-chicken" data-name="Butter Chicken" data-price="190">
+                    <img src="https://www.modernhoney.com/wp-content/uploads/2019/07/Indian-Butter-Chicken-17-500x500.jpg" alt="Butter Chicken">
+                    <h3>Butter Chicken</h3>
+                    <p>Succulent chicken pieces cooked in a creamy, buttery tomato sauce, served with naan or rice.</p>
+                    <span class="price">₹190</span>
+                    <button class="btn add-to-cart" data-id="butter-chicken">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="veg-korma" data-name="Veg Korma" data-price="140">
+                    <img src="https://forkfulofplants.com/wp-content/uploads/2021/06/Vegan-Shahi-Korma-30-500x500.jpg" alt="Veg Korma">
+                    <h3>Veg Korma</h3>
+                    <p>Mixed vegetables cooked in a creamy, mildly spiced gravy, served with roti or rice.</p>
+                    <span class="price">₹140</span>
+                    <button class="btn add-to-cart" data-id="veg-korma">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="jeera-rice" data-name="Jeera Rice" data-price="90">
+                    <img src="https://www.jcookingodyssey.com/wp-content/uploads/2023/06/jeera-rice-3-500x500.jpg" alt="Jeera Rice">
+                    <h3>Jeera Rice</h3>
+                    <p>Basmati rice flavored with cumin seeds and ghee, served with dal or curry.</p>
+                    <span class="price">₹90</span>
+                    <button class="btn add-to-cart" data-id="jeera-rice">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="veg-manchurian" data-name="Veg Manchurian" data-price="130">
+                    <img src="https://www.cookshideout.com/wp-content/uploads/2014/11/Veg-Manchurian-Low-Fat-FI-500x500.jpg" alt="Veg Manchurian">
+                    <h3>Veg Manchurian</h3>
+                    <p>Vegetable balls cooked in a tangy and spicy Indo-Chinese sauce, served with fried rice.</p>
+                    <span class="price">₹130</span>
+                    <button class="btn add-to-cart" data-id="veg-manchurian">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="rasgulla" data-name="Rasgulla" data-price="90">
+                    <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2014/09/rasgulla-recipe-1-500x500.jpg" alt="Rasgulla">
+                    <h3>Rasgulla</h3>
+                    <p>Soft and spongy cottage cheese balls soaked in sugar syrup, a delightful Indian dessert.</p>
+                    <span class="price">₹90</span>
+                    <button class="btn add-to-cart" data-id="rasgulla">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="masala-dosa" data-name="Masala Dosa" data-price="80">
+                    <img src="https://ubfoody.com/wp-content/uploads/2023/03/5-14.jpg" alt="Masala Dosa">
+                    <h3>Masala Dosa</h3>
+                    <p>Crispy rice crepe filled with spiced mashed potatoes, served with coconut chutney and sambar.</p>
+                    <span class="price">₹80</span>
+                    <button class="btn add-to-cart" data-id="masala-dosa">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="gulab-jamun" data-name="Gulab Jamun" data-price="90">
+                    <img src="https://www.funfoodfrolic.com/wp-content/uploads/2020/07/Gulab-Jamun-Thumbnail-500x500.jpg" alt="Gulab Jamun">
+                    <h3>Gulab Jamun</h3>
+                    <p>Deep-fried cottage cheese dumplings soaked in sugar syrup, a classic Indian dessert.</p>
+                    <span class="price">₹90</span>
+                    <button class="btn add-to-cart" data-id="gulab-jamun">Add to Cart</button>
+                </div>
+                <div class="menu-item" data-id="chana-masala" data-name="Chana Masala" data-price="100">
+                    <img src="https://ahappytreat.com/wp-content/uploads/2020/07/DSC_0401_1-500x500.jpg" alt="Chana Masala">
+                    <h3>Chana Masala</h3>
+                    <p>Chickpeas cooked in a spicy and tangy tomato-based sauce, served with rice or poori.</p>
+                    <span class="price">₹100</span>
+                    <button class="btn add-to-cart" data-id="chana-masala">Add to Cart</button>
+                </div>
+            </div>
+            <div class="go-to-cart">
+                <button onclick="location.href='cart.html'">Go to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tiffin Service. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f0f4f8, #d9e5e5);
+}
+
+header {
+    background: #ff6200;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.cart {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cart-item h3 {
+    margin: 0;
+}
+
+.cart-item button {
+    background: #ff6200;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-item button:hover {
+    background: #d55b00;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cart-total .place-order-btn,
+.cart-total .clear-cart-btn {
+    background: #007BFF; /* Primary blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cart-total .place-order-btn:hover,
+.cart-total .clear-cart-btn:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+.cart-total .clear-cart-btn {
+    background: #dc3545; /* Red color for clear cart */
+}
+
+.cart-total .clear-cart-btn:hover {
+    background: #c82333; /* Darker red on hover */
+}
+
+.order-message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ff6200;
+}
